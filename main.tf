@@ -30,7 +30,7 @@ resource "digitalocean_kubernetes_cluster" "kubernetes_cluster" {
     name       = "default-pool"
     size       = "s-2vcpu-4gb" # minimum size, list available options with `doctl compute size list`
     auto_scale = false
-    node_count = 3
+    node_count = 4
     tags       = ["node-pool-tag"]
     labels = {
       "cassandra" = "up"
